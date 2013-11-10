@@ -1,9 +1,9 @@
 #!/bin/bash
 # TermNotes
-# A very simple notes application made by Michael C. Clayton.
+# A simple notes application for bash made by Michael C. Clayton
 
 USAGE="TermNotes arguments:\n\t-s\tShow all the notes.\n
-\t-a\tAppends the note, passed as the last argument, to the note list.\n
+\t-a\tAppends the note, passed as the second argument, to the note list.\n
 \t\t\tEx: ./TermNotes -a \"Don't forget milk.\"\n
 \t-c\tClears the note list."
 
@@ -25,9 +25,17 @@ elif [ "$1" == "-a" ]; then
 	echo -e "\t+ $2" >> ~/.notes
 	echo "Note has been added."
 elif [ "$1" == "-c" ]; then
-	# Clear all the notes
-	echo -n "" > ~/.notes
-	echo "Notes have been cleared."
+	if [ "$2" == "all" ]; then
+		# Clear all the notes
+		echo -n "" > ~/.notes
+		echo "Notes have been cleared."
+	else
+		# Clear the nth note. Where n is the second argument.
+		echo "Note:"
+		sed -n "$2"p ~/.notes
+		sed -i".bak" "$2"d ~/.notes
+		echo "has been cleared."
+	fi
 else
 	echo -e $USAGE
 fi
