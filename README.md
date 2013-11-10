@@ -14,18 +14,23 @@ Running without any arguments will result in TermNotes printing out it's usage.
 
 ## Arguments ##
 
--s		Shows all the notes you have created.
+	-s		Shows all the notes you have created.
 
--a		Appends the note, passed as the last argument, to the note list.
+	-a		Appends the note, passed as the last argument, to the note list.
+			
 			Ex: `./TermNotes.sh -a "Don't forget milk."`
 
--c		Clears the nth note. Where n is an integer passed as the second argument. If the second argument equals "all", then all the notes will be cleared.
+	-c		Clears the nth note. Where n is an integer passed as the second argument. If the second argument equals "all", then all the notes will be cleared.
 		
-	Ex: `./TermNotes.sh -c all`
-		Notes have been cleared.
-	Ex: `./TermNotes.sh -c 1`
-		Cleared Note:
-			+ Don't forget milk. 
+		Ex: `./TermNotes.sh -c all`
+		
+			Notes have been cleared.
+		
+		Ex: `./TermNotes.sh -c 1`
+		
+			Cleared Note:
+		
+				+ Don't forget milk. 
 
 ## Bashrc fun! ##
 For some real fun, add the following to your .bashrc file.
@@ -58,9 +63,13 @@ This will now allow you to:
 3. Use the command `clearnote` to clear the nth note. Where n is an integer passed as the argument. If the argument equals "all", then all the notes will be cleared.
 
 	Ex: `clearnote all`
+		
 		Notes have been cleared.
+	
 	Ex: `clearnote 1`
+		
 		Cleared Note:
+			
 			+ Don't forget milk. 
 
 4. Most importantly, it will print out your note list each time you open up your terminal!

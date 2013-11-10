@@ -29,11 +29,14 @@ elif [ "$1" == "-c" ]; then
 		# Clear all the notes
 		echo -n "" > ~/.notes
 		echo "Notes have been cleared."
-	else
+	elif [[ "$2" != *[!0-9]* ]]; then
+		# If the second argument is an actual integer
 		# Clear the nth note. Where n is the second argument.
 		echo "Cleared note:"
 		sed -n "$2"p ~/.notes
 		sed -i".bak" "$2"d ~/.notes
+	else
+		echo "Invalid argument(s). Note not cleared."
 	fi
 else
 	echo -e $USAGE
