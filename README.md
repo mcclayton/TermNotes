@@ -26,16 +26,19 @@ For some real fun, add the following to your .bashrc file.
 
 ```bash
 # Create TermNotes aliases
-alias shownotes='./TermNotes -s'
+alias shownotes='./TermNotes.sh -s'
 
-alias note='./TermNotes -a'
+alias note='./TermNotes.sh -a'
 
-alias clearnotes='./TermNotes -c'
+alias clearnotes='./TermNotes.sh -c'
 
 
 # Show the notes you have left yourself each interactive invocation of bash
 shownotes
 ```
+<dl>
+  <dt>Important! Make sure to place TermNotes.sh in the same directory as your bashrc or change the aliases to point to the correct file path where TermNotes resides.</dt>
+</dl>
 
 What does this do? 
 

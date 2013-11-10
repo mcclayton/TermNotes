@@ -14,8 +14,9 @@ if [ "$1" == "-s" ]; then
 		echo -n "" > ~/.notes
 	fi
         # Print the contents of the notes file
-	NUMOFLINES=$(wc -l < ~/.notes)
-	echo "You left (${NUMOFLINES}) Notes For Yourself:"
+		#Gets the number of line in the note file without capturing extra output from wc
+	NUMOFLINES=$(echo $(wc -l < ~/.notes))
+	echo "You Left (${NUMOFLINES}) Notes For Yourself:"
 	echo ""
 	cat .notes
 	echo ""
