@@ -18,7 +18,7 @@ if [ "$1" == "-s" ]; then
 	NUMOFLINES=$(echo $(wc -l < ~/.notes))
 	echo "You Left (${NUMOFLINES}) Notes For Yourself:"
 	echo ""
-	cat .notes
+	cat ~/.notes
 	echo ""
 elif [ "$1" == "-a" ]; then
 	# Append the note to ~/.notes
@@ -31,10 +31,9 @@ elif [ "$1" == "-c" ]; then
 		echo "Notes have been cleared."
 	else
 		# Clear the nth note. Where n is the second argument.
-		echo "Note:"
+		echo "Cleared note:"
 		sed -n "$2"p ~/.notes
 		sed -i".bak" "$2"d ~/.notes
-		echo "has been cleared."
 	fi
 else
 	echo -e $USAGE

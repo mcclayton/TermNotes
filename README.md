@@ -21,23 +21,22 @@ Running without any arguments will result in TermNotes printing out it's usage.
 
 -c		Clears the nth note. Where n is an integer passed as the second argument. If the second argument equals "all", then all the notes will be cleared.
 		
-		Ex: `./TermNotes.sh -c all`
-			Notes have been cleared.
-		Ex: `./TermNotes.sh -c 1`
-			Note
-				+ Don't forget milk. 
-			has been cleared.
+	Ex: `./TermNotes.sh -c all`
+		Notes have been cleared.
+	Ex: `./TermNotes.sh -c 1`
+		Cleared Note:
+			+ Don't forget milk. 
 
 ## Bashrc fun! ##
 For some real fun, add the following to your .bashrc file.
 
 ```bash
 # Create TermNotes aliases
-alias shownotes='./TermNotes.sh -s'
+alias shownotes='~/./TermNotes.sh -s'
 
-alias note='./TermNotes.sh -a'
+alias note='~/./TermNotes.sh -a'
 
-alias clearnote='./TermNotes.sh -c'
+alias clearnote='~/./TermNotes.sh -c'
 
 # Show the notes you have left yourself each interactive invocation of bash
 shownotes
@@ -46,7 +45,7 @@ shownotes
   <dt>Important! Make sure to place TermNotes.sh in the same directory as your bashrc or change the aliases to point to the correct file path where TermNotes resides.</dt>
 </dl>
 
-What does this do? 
+### What does this do? ###
 
 This will now allow you to:
 
@@ -58,12 +57,11 @@ This will now allow you to:
 
 3. Use the command `clearnote` to clear the nth note. Where n is an integer passed as the argument. If the argument equals "all", then all the notes will be cleared.
 
-		Ex: clearnote all
-			Notes have been cleared.
-		Ex: clearnote 1
-			Note
-				+ Don't forget milk. 
-			has been cleared.
+	Ex: `clearnote all`
+		Notes have been cleared.
+	Ex: `clearnote 1`
+		Cleared Note:
+			+ Don't forget milk. 
 
 4. Most importantly, it will print out your note list each time you open up your terminal!
 
