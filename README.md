@@ -6,7 +6,7 @@ A simple notes application for bash.
 ## Usage ##
 
 Run TermNotes from the command line as you would any other shell script.
-	`./TermNotes`
+	`./TermNotes.sh`
 
 TermNotes creates a hidden text file: `~/.notes`
 
@@ -17,7 +17,7 @@ Running without any arguments will result in TermNotes printing out it's usage.
 -s		Shows all the notes you have created.
 
 -a		Appends the note, passed as the last argument, to the note list.
-			Ex: `./TermNotes -a "Don't forget milk."`
+			Ex: `./TermNotes.sh -a "Don't forget milk."`
 
 -c		Clears the note list.
 
