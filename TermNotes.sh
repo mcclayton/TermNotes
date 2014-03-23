@@ -18,7 +18,7 @@ if [ "$1" == "-s" ]; then
 	NUMOFLINES=$(echo $(wc -l < ~/.notes))
 	echo "You Left (${NUMOFLINES}) Notes For Yourself:"
 	echo ""
-	cat ~/.notes
+	cat -n ~/.notes
 	echo ""
 elif [ "$1" == "-a" ]; then
 	# Append the note to ~/.notes
